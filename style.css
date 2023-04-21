@@ -1,9 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Volkhov&display=swap');
+
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(0, 41, 137);
+    font-family: 'Volkhov', 'Nova Round', 'Gill Sans', 'Gill Sans MT', sans-serif;
+    height: 100vh;
 }
 
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/partly-cloudy-day.jpg);
+}
+.clear-day {
+    background-image: url(images/clear-day.jpg);
+}
+.partly-cloudy-day {
+    background-image: url(images/partly-cloudy-day.jpg);
+}
+.cloudy-day {
+    background-image: url(images/cloudy-day.jpg);
+}
+.rainy {
+    background-image: url(images/rainy.jpg);
+}
+.clear-night {
+    background-image: url(images/clear-night.jpg);
+}
+.cloudy-night {
+    background-image: url(images/cloudy-night.jpg);
+}
+
+
 .container {
-    color: white;
+    background-color: rgba(135, 135, 135, 0.4);
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid:
+    "header" 55px
+    " main " auto / 
+    1fr;
+    align-items: center;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid: "logo search switch" auto /
+            2fr 4fr 1fr;
+    align-items: center;
+    font-size: 2rem;
+    height: 50px;
+    text-shadow: 3px 3px 2px black;
+}
+
+.header input {
+    grid-area: search;
+    padding: 5px;
+    width: 200px;
+    height: 20px;
+    border-radius: 90px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 1px 1px 2px black;
+    margin-right: 50px;
+    justify-self: end;
+}
+.logo {
+    grid-area: logo;
+    margin-left: 15px;
+    place-self: left;
+    font-family: 'Nova Round';
+}
+
+.switch{ 
+    grid-area: switch;
+    display: flex;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+    width: 125px;
+    justify-content: space-evenly;
+}
+.switch input{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+
+.main-display {
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    text-shadow: 1px 1px 2px black;
+    grid-area: main;
+    display: grid;
+    grid:
+    "location" 65px
+    "location-details" 20px
+    "weather" auto
+    "forecast" 175px / 
+    1fr;
+}
+
+.location {
+    font-size: 3rem;
+    grid-area: location;
+}
+.location-details {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    word-spacing: 5px;
+}
+
+.weather-display {
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 50px;
+    font-size: 2rem;
+    width: 90%;
+    height: 90%;
+    grid-area: weather;
+    display: grid;
+    grid:
+    "condition condition details" auto
+    "current current details" auto
+    "feels-like feels-like details" auto / 
+    1fr 2fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.condition {
+    font-size: 2.5rem;
+    grid-area: condition;
+}
+.current-weather {
+    grid-area: current;
+    font-size: 3.5rem;
+}
+.feels-like {
+    grid-area: feels-like;
+    font-size: 1.2rem;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.details {
+    grid-area: details;
+    color: rgba(255, 255, 255, 0.845);
+    font-size: 1.2rem;
+    display: grid;
+    grid:
+    "humidity" auto
+    "wind" auto
+    "rain" auto / 
+    1fr;
+    gap: 20px;
+}
+
+.humidity, .wind, .rain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidity {
+    grid-area: humidity;
+}
+
+.rain {
+    grid-area: rain;
+}
+
+.info {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.weekly-forecast {
+    grid-area: forecast;
+    width: 90%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.days {
+    height: 150px;
+    width: 100%;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 2px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px white;
+}
+
+.day {
+    place-self: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.631);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: .75rem;
+}
+.day .time, .temp, .hour-feel {
+    text-shadow: 1px 1px 2px black;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.temp, .hour-feel {
+    font-size: 1.35rem;
+    color: black;
+    text-shadow: none;
 }
