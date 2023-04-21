@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">Hello, World!</div>
+    <div class="background clear-night">
+        <div class="container">
+            <div class="header">
+                <div class="logo">Weather</div>    
+                <input type="text" class="location-input" placeholder="Location">
+                <label class="switch">
+                    <input type="checkbox" class="farenheit-toggle">
+                    Celcius
+                </label>
+            </div>
+
+            <div class="main-display">
+                <div class="location"></div>
+                <div class="location-details"></div>
+                <div class="weather-display">
+                    <div class="condition"></div>
+                    <div class="current-weather">**°F</div>
+                    <div class="feels-like">Feels like<div class="info"></div></div>
+                    <div class="details">
+                        <div class="humidity">Humidity<div class="info"></div></div>
+                        <div class="wind">Wind<div class="info"></div></div>
+                        <div class="rain">Chance of rain<div class="info"></div></div>
+                    </div>
+                </div>
+                <div class="weekly-forecast">
+                    Weekly Forecast
+                    <div class="days">
+                        <div class="day six"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day seven"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day eight"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day nine"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day ten"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day eleven"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day twelve"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day thirteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day fourteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day fifteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day sixteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day seventeen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day eighteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day nineteen"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                        <div class="day twenty"><div class="time"></div><div class="temp"></div>Feels like<div class="hour-feel"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
